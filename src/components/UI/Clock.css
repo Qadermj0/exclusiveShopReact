@@ -1,0 +1,52 @@
+@media only screen and (max-width: 992px) {
+
+    .clock_wrapper{
+      justify-content: center;
+  
+  
+    }
+  
+    .clock_data h1{
+       font-size: 32px !important;
+       font-weight: 700;
+  
+    }
+    .clock_data h5{
+      font-size: 12px !important;
+  font-weight: 500;
+     }
+  }
+  .clock_data .dot{
+     color: var(--primary-color);
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    
+    .clock_data h1{
+      font-size: 20px !important;
+      font-weight: 500;
+  
+   }
+   .clock_data h5{
+     font-size: 8px !important;
+  font-weight: 400;
+    }
+  }  
+    
+  
+  
+  
+  @media only screen and (max-width: 576) {
+    
+    .clock_data h1{
+      font-size: 20px !important;
+      font-weight: 500;
+  
+   }
+   .clock_data h5{
+     font-size: 8px !important;
+  font-weight: 400;
+    }
+   }

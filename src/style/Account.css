@@ -1,0 +1,133 @@
+
+
+.account{
+  margin-top: 100px;
+}
+.content_account h4{
+  font-size: 16px;
+ font-weight: 500; 
+}
+.content_account .into{
+  color: #808080;
+   margin: 20px 40px;
+   cursor: pointer;
+
+
+}
+.content_account .into p{
+  margin: 10px;
+}
+
+.content_account .para{
+  color: var(--primary-color);
+ 
+}
+.edit_input{
+    padding: 40px 30px;
+    box-shadow: 0px 1px 13px 0px  #d1cece;
+    border-radius: 4px;
+   }
+.header_edit h2{
+  color: var(--primary-color);
+}
+.edit_input .information {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+ }
+.edit_input .information input{
+  background: #F5F5F5;
+  border-radius: 4px;
+   height: 50px;
+   margin-right: 40px;
+    width: 100%;
+
+ }
+ .information label{
+  margin-bottom: 10px;
+ }
+
+
+.password_change input{
+  background: #F5F5F5;
+  border-radius: 4px;
+   height: 50px;
+   margin-right: 40px;
+   width: 100%;
+
+ }
+
+.edit_input input::placeholder{
+  padding: 10px;
+}
+.password_change h2{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.btn_pass{
+   width: 100%;
+}
+.btn_pass span{
+  margin-right: 20px;
+  cursor: pointer;
+}
+.pass_btn{
+  color: #fff;
+  background: var(--primary-color);
+  font-weight: 500;
+   padding: 10px 30px;
+    border-radius: 5px;
+   margin-top: 10px;
+  
+ } 
+
+
+
+ 
+
+
+
+ @media only screen and (max-width: 992px) {
+  
+  .edit_input{
+    margin-top: 40px;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .edit_input .information {
+    display: grid;
+    gap: 0px;
+  }
+
+  .edit_input{
+    margin-top: 40px;
+  }
+ 
+}
+
+@media only screen and (max-width: 576px) {
+  .edit_input .information {
+    display: grid;
+    gap: 0px;
+
+    
+   
+  }
+
+  .edit_input .information input{
+    
+     margin-right: 10px;
+   
+   }
+ 
+  
+  .password_change input{
+    
+     margin-right: 10px;
+   
+   }
+ 
+}

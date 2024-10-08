@@ -1,0 +1,173 @@
+.category {
+    padding: 20px 40px 0 0;
+    border-right: 1px solid #b3b3b3;
+}
+
+.category .box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.category span {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.homeSlide {
+    background-color: #000;
+    padding: 10px 0 0 70px;
+    color: #ffffff;
+    max-height: 344px;
+}
+
+.homeSlide h1 {
+    display: flex;
+    font-size: 16px;
+    line-height: 55px;
+    margin: 50px 0 10px 0;
+    color: #fafafa;
+}
+
+.homeSlide h1 span img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.homeSlide img {
+    width: 100%;
+    height: 100%;
+}
+
+.homeSlide p {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.homeSlide .btn-box {
+    color: #fafafa;
+    margin-bottom: 60px;
+}
+
+.homeSlide .button {
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.homeSlide span {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.homeSlide .line {
+    margin-top: 5px;
+    height: 2px;
+    width: 80px;
+    background-color: #fafafa;
+}
+
+span.swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+    border: 2px solid #fff;
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+    width: 15px !important;
+    height: 15px !important;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 1200px) {
+    .category {
+        padding: 20px 20px 0 0;
+        border-right: none;
+    }
+
+    .category span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .homeSlide h1 {
+        margin: 40px 0 10px 0;
+        line-height: 40px;
+    }
+
+    .homeSlide p {
+        font-size: 36px;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .homeSlide {
+        padding: 10px 0 0 20px;
+    }
+
+    .homeSlide h1 {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .homeSlide p {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .homeSlide .button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .category {
+        display: none;
+    }
+
+    .homeSlide h1 {
+        font-size: 12px;
+    }
+
+    .homeSlide p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .homeSlide h1 {
+        font-size: 10px;
+        margin: 30px 0 0 0;
+    }
+
+    .homeSlide p {
+        font-size: 20px;
+    }
+
+    .homeSlide .line {
+        width: 60px;
+    }
+
+    .homeSlide .photo img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .homeSlide {
+        padding: 10px 0 0 10px;
+    }
+
+    .homeSlide p {
+        font-size: 18px;
+    }
+}
+
+

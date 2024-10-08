@@ -1,0 +1,148 @@
+
+.input_content{
+  padding: 0 80px 0 0;
+}
+.head_check{
+  font-weight: 500;
+  font-size: 36px;
+  color: #000;
+}
+.check_input label{
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: .5;
+}
+.check_input input{
+  background: #F5F5F5;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+}
+ 
+.checkbox_boxs{
+  display: flex;
+  align-items: center;
+}
+ .check_input input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  
+}
+ 
+
+.details_checkout {
+padding: 80px;
+}
+
+.details_checkout .total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+ }
+.details_checkout .info{
+  display: flex;
+  align-items: center;
+
+}
+.details_checkout .total img{
+width: 40px;
+height: 40px;
+margin-right: 10px;
+}
+
+.details_checkout .images img{
+width: 20px;
+height: 20px;
+}
+
+.Coupon_Cod {
+margin-bottom: 30px;
+}
+.details_checkout .Coupon_Cod input{
+  border: 1px solid #000;
+  opacity: .5;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 40px;
+ 
+ }
+ .coupon_btn{
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 40px;
+
+ }
+ 
+ .details_checkout .box span{
+margin-left: 10px;
+ }
+
+ .details_checkout .total_last{
+  border-bottom: 1px solid #868383 !important;
+  padding-bottom: 10px;
+   
+ }
+  
+
+ 
+ 
+
+
+ @media  only screen  and (max-width: 768px) {
+  
+ 
+  .details_checkout {
+    padding: 10px;
+    }
+    
+    .details_checkout .total{
+      display: grid;
+      margin-top: 30px;
+      width: 100%;
+     }
+    .details_checkout .info{
+      display: flex;
+      align-items: center;
+    
+    }
+    
+    
+    
+    .details_checkout .Coupon_Cod input{
+      width: 100%;
+      padding: 5px 10px;
+      border-radius: 4px;
+     }
+     
+     
+     .coupon_btn{
+        width: 100%;
+  
+     }
+} 
+
+
+
+@media only screen and (max-width: 576px) {
+ 
+  .input_content{
+    padding: 10px;
+    margin: auto;
+  }
+  .head_check{ 
+     font-size: 24px;
+   }
+  
+   
+
+  .checkbox_boxs span{
+    font-size: 12;
+  }
+   
+   
+}

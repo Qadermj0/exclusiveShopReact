@@ -1,0 +1,265 @@
+
+.product_images{
+  display: flex;
+
+}
+.product_image{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+}
+.product_image img{
+  width: 120px;
+  height: 120px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+
+}
+.cover_product{
+  background: #f5f5f5;
+margin-left: 20px;
+display: grid;
+justify-items: center;
+align-content: center;
+}
+.cover_product img{
+  width: 70%;
+ }
+
+.product_information h2{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.product_information .product_rate{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product_information .product_rate i{
+  color: #FFAD33;
+
+ }
+
+ .product_information .product_rate .last{
+  color: #908c8c;
+
+ }
+ 
+ .product_information .product_rate .stock{
+  color: var(--card-bg-02);
+  padding: 0 20px;
+  border-left: 1px solid #000;
+  margin-left: 20px;
+  font-size: 14px;
+ }
+ 
+ .product_information .price{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px 0; 
+ }
+ .product_information .content{
+   font-size: 14px;
+   font-weight: 400;
+   margin: 20px 0;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #6a6767;
+   color: #000;
+ }
+
+ .product_information .colors{
+  display: flex; 
+  align-items: center;
+
+ }
+ .product_information .colors .title{
+  margin-right: 20px;
+ }
+ .product_information .colors .red{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--card-bg-02);
+  margin-right: 10px;
+  border: 3px solid #393838;
+  cursor: pointer;
+
+ }
+ .product_information .colors .blue{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  cursor: pointer;
+
+ }
+ .product_information .size{
+  margin-top: 20px;
+   display: flex; 
+   align-items: center;
+   gap: 30px;
+ }
+
+ .product_information .md{
+    border-radius: 4px;
+   width: 32px;
+   height: 32px;
+   border: 1px solid #908c8c;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ }
+ .product_information .md:hover{
+  background: var(--primary-color);
+  color: #fff;
+
+
+ }
+
+ 
+.product_information .qty{
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+   gap: 20px;
+ }
+.product_information .quantity{
+  display: flex;
+  align-items: center;
+  border: 1px solid #908c8c;
+  justify-content: space-between;
+border-radius: 4px;
+  width: 160px;
+  height: 44px;
+}
+.product_information .quantity span{
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+ 
+}
+.product_information .quantity span:first-child{
+  border-right: 1px solid #908c8c;
+
+}
+
+.product_information .quantity span:last-child{
+  border-left: 1px solid #908c8c;
+
+}
+.product_information .quantity span:hover{
+  background: var(--primary-color);
+  color: #fff;
+}
+
+
+.buy_now{
+  color: #fff;
+  background: var(--primary-color);
+  font-weight: 500;
+   padding: 10px 40px;
+    border-radius: 5px;
+    height: 44px;
+  
+ }
+
+ .product_information .icon{
+  font-size: 20px;
+ border: 1px solid #908c8c;
+ width: 32px;
+ height: 32px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 4px;
+ }
+
+ .delivery_box{
+  border: 1px solid #908c8c;
+  width: 100%;
+  height: 180px;
+   display: grid;
+  align-content: center;
+  gap: 20px;
+ }
+ .delivery_box .box{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding: 0 20px;
+   width: 100%;
+  }
+ .delivery_box h2{
+   font-size: 16px;
+    font-weight: 500;
+ }
+ .delivery_box p{
+   font-weight: 500;
+   font-size: 12px;
+ }
+ .delivery_box i {
+   font-size: 30px;
+
+ }
+
+ .delivery_box .box_top{
+  border-bottom: 1px solid #908c8c;
+  padding-bottom: 10px;
+ }
+
+ @media only screen and (max-width: 992px) {
+
+   .product_details{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   }
+   
+   
+ }
+
+
+ 
+
+
+
+
+@media only screen and (max-width: 576px) {
+
+   
+  .buy_now{
+    padding: 10px;
+  }
+  .product_image img{
+    width: 60px;
+    height: 60px;
+    
+  
+  }
+  .cover_product{
+    background: #f5f5f5;
+  margin-left: 20px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  }
+  .cover_product img{
+    width: 70%;
+   }
+} 
+
+.icon .love.active{
+  color: var(--primary-color);
+ }

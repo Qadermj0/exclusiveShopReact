@@ -1,0 +1,168 @@
+.head_cart{
+padding: 30px;
+/* box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); */
+box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+}
+
+.body_cart{
+   box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+display: flex;
+align-items: center;
+padding: 10px;
+}
+.body_cart img{
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+ }
+ .img_cart{
+  position: relative;
+
+ }
+.delete{
+  position: absolute;
+  top: -50%;
+  left: 0px;
+  content: '';
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem; 
+  font-weight: 600;
+  z-index: 10;
+  cursor: pointer;
+}
+.body_cart .qty span{
+border: 1px solid #000;
+  
+padding: 5px;
+font-size: 12px;
+ border-radius: 5px;
+margin: 5px;
+font-weight: 600;
+text-align: center;
+ }
+
+ .cleck{
+  cursor: pointer;
+ }
+ 
+
+ .cart_button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+  
+ .coupon{
+  margin-top: 50px;
+  align-items: start;
+ }
+ .coupon input{
+  border: 1px solid #a19f9f;
+  margin-right: 30px;
+  border-radius: 4px;
+  padding: 5px 20px;
+  width: 50%;
+
+
+ }
+
+ .coupon_btn{
+  width: 50%;
+  padding: 5px 20px;
+   border-radius: 4px;
+  background: var(--primary-color);
+  color: #fff;
+  margin-top: 10px;
+
+ }
+
+ .check_out {
+width: 100%;
+ padding: 20px;
+border: 1px solid #a19f9f;
+border-radius: 4px;
+display: grid;
+    }
+.check_out h6{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.check_out h4{
+  font-size: 16px;
+  font-weight: 500;
+}
+ .check_out .total{
+display: flex;
+align-content: center;
+justify-content: space-between;
+border-bottom: 1px solid #a19f9f;
+padding-bottom: 10px;
+margin-top: 20px;
+
+ }
+.total_last{
+
+  border: none !important;
+}
+.last_btn{
+   width: 100%;
+}
+ .check_out .coupon_btn{
+  margin-top: 30px;
+  }
+  @media only screen and (max-width: 992px) {
+   
+    .body_cart .title_img{
+      display: none;
+   }
+  }
+  
+  @media only screen and (max-width: 768px) {
+   
+    .coupon_btn{
+      padding: 5px 10px;
+  
+    } 
+    .body_cart .title_img{
+      display: none;
+   }
+  }
+  @media only screen and (max-width: 576px) {
+    .coupon_res{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .coupon input{
+       margin-right: 0px;
+     }
+.body_cart{
+  box-shadow: none;
+}
+.head_cart{
+  box-shadow: none;
+
+}
+    .body_cart .title_img{
+       display: none;
+    }
+    .last_btn{
+      width: 100%;
+    }
+    .check_out{
+      margin: auto;
+    }
+  }

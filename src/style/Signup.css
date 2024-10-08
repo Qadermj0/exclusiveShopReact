@@ -1,0 +1,119 @@
+.signup .info{
+padding: 60px;
+margin-left: 40px;
+}
+.auth_form {
+   padding: 20px 0px;
+
+ }
+
+.login_btn{
+  color: #fff;
+  background: var(--primary-color);
+  font-weight: 600;
+   padding: 10px ;
+    border-radius: 5px;
+   margin-top: 10px;
+   width: 100%;
+
+}
+.google_btn{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+margin-top: 10px;
+}
+.google_btn span{
+  margin-right: 10px;
+}
+.info h3 {
+  text-align: start;
+font-weight: 500;
+font-size: 36px;
+}
+.info p{
+  text-align: start;
+margin-top: 10px;
+}
+
+.auth_form p{
+  margin-top: 30px;
+}
+.auth_form p a{
+  color: #000;
+ }
+.auth_form input{
+ font-size: 16px;
+font-weight: 400;
+width: 100%;
+opacity: .7;
+  border-bottom:  1px solid #000;
+}
+
+.contect span {
+  padding-bottom: 2px;
+ border-bottom: 1px solid #000;
+  margin-left: 5px;
+}
+.signup .img img{
+  height: 500px;
+}
+ 
+ .login_info{
+  padding-top: 120px !important;
+ }
+.btns{
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+}
+.btns .login_click{
+width: 30%;
+}
+.btns span{
+  color: var(--primary-color);
+ 
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+ .res_content{
+  display: flex;
+  flex-direction: column-reverse;
+  }
+  .signup .img img{
+    height: 300px;
+    border-radius: 30px 0;
+  }
+  .signup .info{
+    padding: 0px;
+    padding-bottom: 30px;
+
+   }
+
+   .login_info{
+    padding-top: 0px !important;
+   }
+}
+
+@media only screen and (max-width: 576px) {
+  .res_content{
+    display: flex;
+    flex-direction: column-reverse;
+    }
+  .signup .img img{
+    height: 300px;
+    border-radius: 30px 0;
+
+  }
+  .signup .info{
+    padding: 0;
+    padding-bottom: 30px;
+ 
+  }
+  .login_info{
+    padding-top: 0px !important;
+   }
+}
