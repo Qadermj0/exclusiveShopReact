@@ -58,6 +58,9 @@ const Header = () => {
 
   const menuToggle = () => menuRef.current.classList.toggle("active_menu");
 
+  // Close dropdown when a profile option is clicked
+  const closeDropdown = () => setToggle(false);
+
   const nav_link = [
     {
       path: "home",
@@ -137,23 +140,23 @@ const Header = () => {
                     toggle ? "profile_action d-block" : "profile_action"
                   }
                 >
-                  <Link to="/account">
+                  <Link to="/account" onClick={closeDropdown}>
                     <img src={user} alt="Account" className="dropdown-icon" />
                     Manage My Account
                   </Link>
-                  <Link to="/order">
+                  <Link to="/order" onClick={closeDropdown}>
                     <img src={mailbag} alt="Order" className="dropdown-icon" />
                     My Order
                   </Link>
-                  <Link to="/cancellation">
+                  <Link to="/cancellation" onClick={closeDropdown}>
                     <img src={cancel} alt="Cancel" className="dropdown-icon" />
                     My Cancellations
                   </Link>
-                  <Link to="#">
+                  <Link to="#" onClick={closeDropdown}>
                     <img src={review} alt="Reviews" className="dropdown-icon" />
                     My Reviews
                   </Link>
-                  <Link to="/login">
+                  <Link to="/login" onClick={closeDropdown}>
                     <img src={logout} alt="Logout" className="dropdown-icon" />
                     Logout
                   </Link>

@@ -52,7 +52,7 @@ const productSlice = createSlice({
           localStorage.setItem("totalBefor", JSON.stringify(state.totalBefor));
 
         } else {
-        //  existingItems.quantity++;
+        
         existingItems.amount++;
 
         existingItems.totalPrice = existingItems.amount * newProduct.newprice;
