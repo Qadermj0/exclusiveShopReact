@@ -13,8 +13,9 @@ import Account from '../pages/Account';
 import Product_Details from '../pages/Product_Details';
 import data from '../components/UI/Data'
 import Order from '../pages/Order';
-import NotFound from '../components/NotFound/NotFound';
+
 import CancellationOrder from '../pages/CancellationOrder';
+import NotFound from '../pages/NotFound';
 
 const Routers = () => { 
   return (
