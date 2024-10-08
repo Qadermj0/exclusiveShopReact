@@ -4,7 +4,7 @@
 }
 
 .category .box {
-    display: flex;
+    
     justify-content: space-between;
     margin-bottom: 17px;
 }
@@ -14,6 +14,31 @@
     line-height: 24px;
     font-weight: 400;
 }
+
+.subcategories {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 20px; /* Indentation for subcategories */
+}
+
+.box.active .subcategories {
+    display: block; /* Show subcategories when the box is active */
+}
+
+.subcategories li {
+    margin: 5px 0; /* Space between subcategory items */
+}
+
+.subcategories li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Default text color */
+}
+
+/* Add hover effect */
+.subcategories li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
 
 .homeSlide {
     background-color: #000;
@@ -129,7 +154,7 @@ span.swiper-pagination-bullet-active {
 
 @media only screen and (max-width: 768px) {
     .category {
-        display: none;
+        display: none; /* Ensure this is intentional */
     }
 
     .homeSlide h1 {
@@ -169,5 +194,3 @@ span.swiper-pagination-bullet-active {
         font-size: 18px;
     }
 }
-
-
