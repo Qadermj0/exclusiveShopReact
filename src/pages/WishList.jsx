@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Container, Row ,Col } from "reactstrap";
 import '../components/Home/Home.css'
 import ProductCard from '../components/UI/ProductCard';
-import productImg from "../components/UI/images/image-3.png";
+
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import data from '../components/UI/Data'
