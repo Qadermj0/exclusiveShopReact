@@ -26,7 +26,6 @@ const Header = () => {
       item.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setProducts(searchedProduct);
-
     navigate("/shop", { state: { searchTerm } });
   };
 
@@ -62,23 +61,21 @@ const Header = () => {
   const closeDropdown = () => setToggle(false);
 
   const nav_link = [
-    {
-      path: "home",
-      display: "Home",
-    },
-    {
-      path: "contact",
-      display: "Contact",
-    },
-    {
-      path: "about",
-      display: "About",
-    },
-    {
-      path: "signup",
-      display: "Sign up",
-    },
+    { path: "home", display: "Home" },
+    { path: "contact", display: "Contact" },
+    { path: "about", display: "About" },
+    { path: "signup", display: "Sign up" },
   ];
+
+  const handleProfileToggle = () => {
+    setToggle((prev) => !prev);
+    // Close the dropdown after 5 seconds
+    if (!toggle) {
+      setTimeout(() => {
+        setToggle(false);
+      }, 5000);
+    }
+  };
 
   return (
     <header className="header" ref={headerRef}>
@@ -130,16 +127,8 @@ const Header = () => {
               </span>
 
               <span className="profile">
-                <i
-                  onClick={() => setToggle(!toggle)}
-                  className="ri-user-3-line"
-                ></i>
-
-                <div
-                  className={
-                    toggle ? "profile_action d-block" : "profile_action"
-                  }
-                >
+                <i onClick={handleProfileToggle} className="ri-user-3-line"></i>
+                <div className={toggle ? "profile_action d-block" : "profile_action"}>
                   <Link to="/account" onClick={closeDropdown}>
                     <img src={user} alt="Account" className="dropdown-icon" />
                     Manage My Account

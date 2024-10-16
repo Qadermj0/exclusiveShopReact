@@ -19,7 +19,7 @@ const Flash_Sales = ({products,addProducts}) => {
 
    </div>
   <div className='clock_box w-70'>
-   <Clock/>
+   <Clock />
   </div>
  </Col>
  

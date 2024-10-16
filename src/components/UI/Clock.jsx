@@ -1,69 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import './Clock.css'
+import React, { useEffect, useState } from 'react';
+import './Clock.css';
+
 const Clock = () => {
-  const [days, setDays]=useState();
-  const [hours, setHours]=useState();
-  const [minutes, setMinutes]=useState();
-  const [seconds, setSecond]=useState();
-
-  let interval;
-  const countDown =() =>{
-    const destination =new Date('oct 10, 2024').getTime();
-    interval = setInterval(() =>{
-      const now= new Date().getTime();
-      const different = destination - now;
-      const days = Math.floor(different /(1000 * 60 * 60 * 24) );
-      const hours = Math.floor(different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-      const minutes = Math.floor(different % (1000 * 60 * 60 ) / (1000 * 60));
-      const seconds = Math.floor(different % (1000 * 60)/1000);
-      if(destination <0) clearInterval(interval.current)
-      else{
-    setDays(days);
-    setHours(hours);
-    setMinutes(minutes);
-    setSecond(seconds);  
-  } 
-    })
-  }
-  useEffect(() =>{
-countDown();
-  },[])
-  return  <div className="clock_wrapper d-flex align-items-center gap-3 mb-2">
-    <div className="clock_data d-flex align-items-center gap-3">
-      <div className='text-center'>
-      <h5 className='  '>Days</h5>
-        <h1 className='  '>{days}</h1>
-       
-      </div>
-      <span className='dot fs-3'>:</span>
-    </div>
-
+  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  
+  useEffect(() => {
+    const destination = new Date('October 22, 2024').getTime();
     
-     <div className="clock_data d-flex align-items-center gap-3">
-      <div className='text-center'>
-      <h5 className='text-black  '>Hours</h5>
-        <h1 className='text-black  '> {hours} </h1>
-       
-      </div>
-      <span className='dot  fs-3'>:</span>
-    </div>  
-    <div className="clock_data d-flex align-items-center gap-3">
-      <div className='text-center'>
-      <h5 className='text-black  '>Minutes</h5>
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = destination - now;
 
-        <h1 className='text-black  '>{minutes} </h1>
-      </div>
-      <span className='dot fs-3'>:</span>
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      setTime({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
+      });
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+
+  return (
+    <div className="clock_wrapper d-flex align-items-center gap-3 mb-2">
+      {Object.entries(time).map(([unit, value], index) => (
+        <div key={unit} className="clock_data d-flex align-items-center gap-3">
+          <div className='text-center'>
+            <h5 className=''>{unit.charAt(0).toUpperCase() + unit.slice(1)}</h5>
+            <h1 className=''>{value < 10 ? `0${value}` : value}</h1>
+          </div>
+          {index < Object.keys(time).length - 1 && <span className='dot fs-3'>:</span>}
+        </div>
+      ))}
     </div>
+  );
+};
 
-    <div className="clock_data d-flex align-items-center gap-3">
-      <div className='text-center'>
-      <h5 className='text-black  '>Seconds</h5>
-
-        <h1 className='text-black  '>{seconds}</h1>
-      </div>
-     </div> 
-  </div>
-}
-
-export default Clock
+export default Clock;

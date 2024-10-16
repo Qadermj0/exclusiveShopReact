@@ -1,75 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import './Home.css'
- const Clock = () => {
-  const [days, setDays]=useState();
-  const [hours, setHours]=useState();
-  const [minutes, setMinutes]=useState();
-  const [seconds, setSecond]=useState();
+import React, { useEffect, useState } from 'react';
+import './Home.css';
 
-  let interval;
-  const countDown =() =>{
-    const destination =new Date('oct 10, 2024').getTime();
-    interval = setInterval(() =>{
-      const now= new Date().getTime();
-      const different = destination - now;
-      const days = Math.floor(different /(1000 * 60 * 60 * 24) );
-      const hours = Math.floor(different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-      const minutes = Math.floor(different % (1000 * 60 * 60 ) / (1000 * 60));
-      const seconds = Math.floor(different % (1000 * 60)/1000);
-      if(destination <0) clearInterval(interval.current)
-      else{
-    setDays(days);
-    setHours(hours);
-    setMinutes(minutes);
-    setSecond(seconds);  
-  } 
-    })
-  }
-  useEffect(() =>{
-countDown();
-  },[])
-  return  <div className="clock_wrapper_home d-flex   gap-3 mb-2">
+const Clock = () => {
+  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-<div className="clock_info    ">
-  <div className="circle">
-  <div className='text-black  '> {hours} </div>
+  useEffect(() => {
+    const destination = new Date('October 19, 2024').getTime();
 
-      <div className='text-black  '>Hours</div>
-  </div>
-     
-       
-      </div>  
-    <div className="clock_info  ">
-    <div className="circle">
-  <div className='text-black  '> {days} </div>
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = destination - now;
 
-      <div className='text-black  '>Days</div>
-  </div>
-       
-       
-      </div>
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTime({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        });
+      }
+    }, 1000);
 
-    
-   
-    <div className="clock_info  ">
-    <div className="circle">
-  <div className='text-black  '> {minutes} </div>
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
-      <div className='text-black  '>Minutes</div>
-  </div>
-       
-      </div>
+  return (
+    <div className="clock_wrapper_home d-flex gap-3 mb-2">
+      {Object.entries(time).map(([unit, value], index) => (
+        <div key={unit} className="clock_info">
+          <div className="circle">
+            <div className='text-black'>{value < 10 ? `0${value}` : value}</div>
+            <div className='text-black'>{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-    <div className="clock_info  ">
-    <div className="circle">
-  <div className='text-black  '> {seconds} </div>
-
-      <div className='text-black  '>Seconds</div>
-  </div>
- 
-
-      </div> 
-  </div>
-}
-
-export default Clock
+export default Clock;
